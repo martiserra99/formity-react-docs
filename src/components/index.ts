@@ -1,4 +1,3 @@
-export { default as Screen } from "@/components/screen";
 export { default as FormView } from "@/components/form-view";
 export { default as FormLayout } from "@/components/form-layout";
 export { default as Next } from "@/components/navigation/next";
