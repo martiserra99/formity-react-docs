@@ -33,10 +33,10 @@ export function Controller({
   );
 
   return (
-    <ControllerContext.Provider value={values}>
-      <div key={step} className="h-full">
+    <div key={step} className="h-full">
+      <ControllerContext.Provider value={values}>
         {children}
-      </div>
-    </ControllerContext.Provider>
+      </ControllerContext.Provider>
+    </div>
   );
 }
