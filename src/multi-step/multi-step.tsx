@@ -3,9 +3,9 @@ import type { OnNext, OnBack, GetState, SetState } from "@formity/react";
 
 import { useMemo } from "react";
 
-import { ControllerContext } from "./controller-context";
+import { MultiStepContext } from "./multi-step-context";
 
-interface ControllerProps {
+interface MultiStepProps {
   step: string;
   onNext: OnNext;
   onBack: OnBack;
@@ -14,29 +14,23 @@ interface ControllerProps {
   children: ReactNode;
 }
 
-export function Controller({
+export function MultiStep({
   step,
   onNext,
   onBack,
   getState,
   setState,
   children,
-}: ControllerProps) {
+}: MultiStepProps) {
   const values = useMemo(
-    () => ({
-      onNext,
-      onBack,
-      getState,
-      setState,
-    }),
+    () => ({ onNext, onBack, getState, setState }),
     [onNext, onBack, getState, setState]
   );
-
   return (
     <div key={step} className="h-full">
-      <ControllerContext.Provider value={values}>
+      <MultiStepContext.Provider value={values}>
         {children}
-      </ControllerContext.Provider>
+      </MultiStepContext.Provider>
     </div>
   );
 }

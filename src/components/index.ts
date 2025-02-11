@@ -1,7 +1,7 @@
-export { default as FormView } from "@/components/form-view";
-export { default as FormLayout } from "@/components/form-layout";
-export { default as Next } from "@/components/navigation/next";
-export { default as Back } from "@/components/navigation/back";
+export { default as Step } from "@/components/step";
+export { default as Layout } from "@/components/layout";
+export { default as Next } from "@/components/navigation/next-button";
+export { default as Back } from "@/components/navigation/back-button";
 export { default as Row } from "@/components/user-interface/row";
 export { default as TextField } from "@/components/react-hook-form/text-field";
 export { default as NumberField } from "@/components/react-hook-form/number-field";
