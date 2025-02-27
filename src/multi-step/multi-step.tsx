@@ -24,7 +24,7 @@ export function MultiStep({
 }: MultiStepProps) {
   const values = useMemo(
     () => ({ onNext, onBack, getState, setState }),
-    [onNext, onBack, getState, setState]
+    [onNext, onBack, getState, setState],
   );
   return (
     <div key={step} className="h-full">
